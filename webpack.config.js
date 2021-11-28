@@ -2,12 +2,12 @@ const path = require("path");
 const webpack = require("webpack");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = env => {
+module.exports = (env) => {
   return {
     entry: ["babel-polyfill", __dirname + "/app/js"],
     output: {
       path: path.join(__dirname, "build"),
-      filename: "bundle.js"
+      filename: "bundle.js",
     },
     module: {
       rules: [
@@ -22,49 +22,49 @@ module.exports = env => {
               [
                 "transform-runtime",
                 {
-                  regenerator: true
-                }
-              ]
-            ]
-          }
+                  regenerator: true,
+                },
+              ],
+            ],
+          },
         },
         {
           test: /\.css$/,
-          use: ["style-loader", "css-loader"]
+          use: ["style-loader", "css-loader"],
         },
         {
           test: /\.scss$/,
-          use: ["style-loader", "css-loader", "sass-loader"]
+          use: ["style-loader", "css-loader", "sass-loader"],
         },
         {
           test: /\.(png|woff|woff2|eot|ttf|svg|jpg)(\?.*$|$)/,
-          use: "url-loader?limit=100000"
-        }
-      ]
+          use: "url-loader?limit=100000",
+        },
+      ],
     },
     resolve: {
       extensions: [".js", ".css", ".scss", ".json"],
       alias: {
         components: path.resolve(__dirname, "app", "js", "components"),
         logger$: path.resolve(__dirname, "app", "js", "logger", "index.js"),
-        styles: path.resolve(__dirname, "app", "styles")
-      }
+        styles: path.resolve(__dirname, "app", "styles"),
+      },
     },
     plugins: [
       new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery",
-        Tether: "tether"
+        Tether: "tether",
       }),
       new htmlWebpackPlugin({
-        template: path.resolve(__dirname, "app", "index.html")
-      })
+        template: path.resolve(__dirname, "app", "index.html"),
+      }),
     ],
-    jsPracServer: {
+    devServer: {
       contentBase: path.resolve(__dirname, "build"),
       inline: true,
-      port: 4000
+      port: 4000,
     },
-    devtool: "source-map"
+    devtool: "source-map",
   };
 };
