@@ -1,0 +1,30 @@
+Javascript objects can be defined as a collection of grouped variables.
+
+The variables can then be called as properties of the object.
+    Example:
+    var person = {
+        firstName: "Finyah",
+        lastName : "John",
+        hasChildren : false,
+        getFullName : function () {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+The object can be called as a function and the properties can be accessed as if they were variables.
+    Example:
+    var person = {
+        firstName: "Finyah",
+        lastName : "John",
+        hasChildren : false,
+        getFullName : function () {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    alert(person.getFullName()); // alerts "Finyah John"
+    alert(person.firstName); // alerts "John"
+    alert(person.lastName); // alerts "John"
+    alert(person.hasChildren); // alerts false
+    alert(person.getFullName()); // alerts "John John"
+
+You can get all values of an object by using the function Object.values(objectName);
+
