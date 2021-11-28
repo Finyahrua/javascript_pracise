@@ -3,9 +3,19 @@
 
 body{
   margin-top: 40px;
+  background-color: rgba(124, 160, 117, 0.425);
 }
 
 #content{
   font-size: 1.4em;
-  color: gray;
+  color: rgb(91, 91, 92);
+  margin-left: 50px;
+}
+#title{
+  font-size: 2.5em;
+  color: rgb(65, 68, 71);
+}
+hr{
+  border: 2px solid rgb(247, 247, 247);
+  width: 100%;
 }

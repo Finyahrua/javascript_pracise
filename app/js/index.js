@@ -1,8 +1,9 @@
 /* styling */
-require('styles/main.scss');
+require("styles/main.scss");
 /* js */
-import $ from 'jquery';
-import { log, logTitle } from 'logger';
+import $ from "jquery";
+import { log, logBanner } from "logger";
 /* your imports */
-logTitle('Title')
+logBanner("Javascript Practice");
 /* coding examples */
+log("hello world")
