@@ -1,0 +1,18 @@
+Variable can simply refer to place holders meaning they allow you to store values 
+in them.
+
+They act as boxes that cann allow you to store items of different data types in them.
+in javascript we have two types of variables:
+    1.variables that are declared with var
+    2.variables that are declared with let
+
+Those declared with var keyword are global variables meaning they can be used in any scope.
+    Example: var name = "John";
+    Example: var age = 23;
+    These variables can be used within any function or block of code, they are not limited to the scope of the function or block of code.
+
+Those declared with let keyword are local variables meaning they can only be used in the scope they are declared in.
+    Example: let name = "John";
+    Example: let age = 23;
+    These variables can only be used within the block of code they are declared in, that is they can not be used in any other block of code.
+
